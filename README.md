@@ -1,2 +1,1 @@
 Study_JavaScript
-JavaScript 기초부터 다시 배우기
