@@ -3,7 +3,7 @@
 //use this for Vanila JavaScript
 'use strict';
 
-//2. Variable
+//2. Variable (read/write)
 //let (added in ES6)
 //Mutable type
 let globalName = 'global name';
@@ -26,7 +26,7 @@ console.log(globalName);
 }
 console.log(age)// 4
 
-//3. Constant
+//3. Constant (read only)
 //Immutable type, Good reasons : 
 // - security
 // - thread safety
@@ -82,3 +82,18 @@ console.log(`value: ${x}, type: ${typeof x}`);
 const symbol1 = Symbol('id');//symbol은 동일한 string을 작성해도 다른 symbol로 만들어짐
 const symbol2 = Symbol('id');
 console.log(symbol1 === symbol2);    //false
+const gsymbol1 = Symbol.for('id');
+const gsymbol2 = Symbol.for('id');
+console.log(gsymbol1 === gsymbol2); //true
+console.log(`value ${gsymbol1.description}, type: ${gsymbol1.description}`);
+
+//Dynamic typing: dynamically typed language
+let text = hello;
+console.log(text.charAt(0)); //h
+console.log(`value: ${text}, type: ${typeof text}`);   //hello
+text = 1;
+console.log(`value: ${text}, type: ${typeof text}`);   //1
+text = '7' + 5;
+console.log(`value: ${text}, type: ${typeof text}`);   //75
+text = '8' / '2'
+console.log(`value: ${text}, type: ${typeof text}`);   //4
